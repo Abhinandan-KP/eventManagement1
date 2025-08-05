@@ -1,0 +1,122 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    background-color: #f4f4f4;
+    padding-top: 100px; 
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px; 
+    background-color: #1a1a1a;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end; 
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.navbar div {
+    margin-left: 30px; 
+    cursor: pointer;
+    transition: 0.3s ease;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar div:hover {
+    background-color: #ffffff;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+}
+.navbar div a{
+    color: white;
+}
+.navbar div a:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 25px;
+    margin-top: 50px;
+    background-color: black;
+    max-width: 100%
+
+}
+
+
+.box {
+    background: white;
+    width: 30%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+.box-content h2 {
+    margin-bottom: 10px;
+}
+
+.box-img {
+    width: 100%;
+    height: 300px;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+
+}
+
+.Create {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.Create p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffecec;
+}
+
+.Create button {
+    background-color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.Create button a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.Create button:hover {
+    background-color: #a19292;
+    color: #000000;
+}
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Manager</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div><a href="index.html" style="text-decoration: none">Home</a></div>
+      
+      <div>
+        <a href="register.html" style="text-decoration: none">Register</a>
+      </div>
+      <div><a href="create.html" style="text-decoration: none">Create</a></div>
+    </nav>
+
+    <div class="main" id="main"></div>
+    <script>
+      window.onload = function () {
+        const storedEvents =
+          JSON.parse(localStorage.getItem("box-content")) || [];
+        const mainBlock = document.getElementById("main");
+        storedEvents.forEach((Event) => {
+          const newdiv = document.createElement("div");
+          newdiv.classList.add("box");
+          mainBlock.appendChild(newdiv);
+          const newdiv1 = document.createElement("div");
+          newdiv1.classList.add("box-content");
+          newdiv1.innerHTML += `<h2>Event</h2>
+          <div class="box-img" style="background-image: url(${Event.src})">
+            <a href="register.html"></a>
+          </div>`;
+          newdiv.appendChild(newdiv1);
+          newdiv.addEventListener("click", function () {
+            const action = confirm("Click OK to register");
+            if (action) {
+              window.location.href = "register.html";
+            }
+          });
+        });
+      };
+    </script>
+  </body>
+</html>
