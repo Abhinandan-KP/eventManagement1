@@ -77,4 +77,4 @@ This project is intentionally lightweight and modern:
 
 ---
 
-💡 *Want to add a **“How It Works”** section explaining the step-by-step process of creating an event? I can write it cleanly for users and recruiters.*
+
