@@ -3,13 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Explore Events | Evently</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #fcfcfd; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
+        .event-card:hover { transform: translateY(-4px); }
+    </style>
 </head>
-<body>
-    <nav class="navbar">
-        <div><a href="index.html" style="text-decoration: none;">Home</a></div>
-        <div><a href="register.html" style="text-decoration: none;">Register</a></div>
+<body class="min-h-screen">
+
+    <nav class="sticky top-0 z-50 glass border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-sm">E</span>
+                </div>
+                <span class="text-xl font-bold tracking-tight text-gray-900">Evently</span>
+            </div>
+            <div class="flex items-center gap-8 text-sm font-medium text-gray-600">
+                <a href="index.html" class="hover:text-black transition">Home</a>
+                <a href="events.html" class="text-black font-semibold">Explore</a>
+                <a href="create.html" class="bg-black text-white px-5 py-2.5 rounded-full hover:bg-gray-800 transition shadow-lg shadow-black/10">
+                    + Create Event
+                </a>
+            </div>
+        </div>
     </nav>
+
+    <header class="max-w-7xl mx-auto px-6 pt-16 pb-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div>
+                <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight">Upcoming Events</h1>
+                <p class="text-gray-500 mt-2 text-lg">Discover experiences curated by humans, for humans.</p>
+            </div>
+            
+            <div class="relative w-full md:w-80">
+                <input type="text" id="searchInput" placeholder="Search events..." 
+                    class="w-full pl-10 pr-4 py-3 bg-white border border-gray-200 rounded-2xl focus:ring-2 focus:ring-black focus:outline-none transition shadow-sm">
+                <svg class="absolute left-3 top-3.5 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-8">
+        <div id="event-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="animate-pulse bg-white border border-gray-100 rounded-3xl p-6 h-80">
+                <div class="bg-gray-200 rounded-2xl h-40 w-full mb-4"></div>
+                <div class="h-6 bg-gray-200 rounded w-3/4 mb-2"></div>
+                <div class="h-4 bg-gray-200 rounded w-1/2"></div>
+            </div>
+            <div class="animate-pulse bg-white border border-gray-100 rounded-3xl p-6 h-80 hidden md:block">
+                <div class="bg-gray-200 rounded-2xl h-40 w-full mb-4"></div>
+                <div class="h-6 bg-gray-200 rounded w-3/4 mb-2"></div>
+                <div class="h-4 bg-gray-200 rounded w-1/2"></div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="mt-20 border-t border-gray-100 py-10 text-center text-gray-400 text-sm">
+        <p>&copy; 2025 Evently. Handcrafted for the community.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
